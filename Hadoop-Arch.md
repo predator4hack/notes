@@ -47,6 +47,15 @@ Apache Hive provides a SQL-like interface over data stored in HDFS. It's essenti
 -   Stores metadata about tables in the Hive Metastore
 -   Underlying data still lives in HDFS
 
+When you run .saveAsTable("table_name"), Spark doesn't just save the data files. It registers this data as a "table" in a central catalog called the Hive Metastore. This metastore is like a giant address book for all your tables; it stores the table name, its columns, data types, and, most importantly, the location of the actual data files on the HDFS.
+This metastore is organized into databases (sometimes called schemas), just like a traditional SQL server.
+
+Here's what is most likely happening:
+
+1. Your Spark Job: When your Spark application starts, it connects to a default database (often just named default). Since your code doesn't specify a database, it saves table_name into that default database.
+
+2. Your Company Portal: When you log in to your query portal, your user account is configured to use a different default database, perhaps one named after your team (analytics_prod) or your username (user_jdoe).
+
 ## Data Nodes vs. Compute - Data Locality
 
 HDFS has DataNodes that store data, and YARN allocates compute resources using NodeManagers that typically run on the same physical machines as the DataNodes. This is a key design principle called data locality.
