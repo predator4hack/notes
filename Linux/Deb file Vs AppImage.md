@@ -1,5 +1,4 @@
 
-
 ## 📦 What is a .deb File?
 
 A **`.deb` file** is the standard package format used by **Debian** and its derivatives, such as **Ubuntu** and **Mint**.
