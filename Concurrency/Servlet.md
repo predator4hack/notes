@@ -178,3 +178,92 @@ They **queue**.
 
 **Requests 201–1000:** Are sitting in a memory queue inside the server, doing absolutely nothing. They are "Accepted" by the OS, but the Application hasn't started reading their data yet because no worker is free.
 **Note:** If the queue gets too full (e.g., hits a limit of 10,000), the server will stop accepting new connections entirely, and users will see "Connection Refused."
+
+---
+
+# Stateless servlet
+
+### 1. What is a Stateless Servlet?
+
+In Java, a **Servlet** is a Java class used to extend the capabilities of a server.1 A **Stateless Servlet** is one that does not maintain any information (state) about a specific client or request in its instance variables (fields).
+
+Think of a Stateless Servlet like a mathematical function, say $f(x) = x + 2$. No matter how many times you call it, or who calls it, it doesn't "remember" the previous result. It simply takes the input, processes it, and returns the output.
+
+### 2. "Stateless objects are always thread safe"
+
+To understand this quote, we have to look at what "thread unsafe" actually means. Thread safety issues arise when multiple threads try to **read and write shared data** at the same time (a race condition).2
+
+- **Stateful Objects:** Have instance variables (fields) that live on the **Heap** 🧠. If two threads access the same object, they share these variables.3 If one thread changes a variable while another reads it, chaos ensues.
+    
+- **Stateless Objects:** Have no instance variables (or only immutable ones).4 They rely entirely on local variables within methods. Local variables live on the **Stack** 🥞. Every thread gets its own private Stack.
+    
+
+**Therefore:** If an object has no state (no shared instance variables), threads cannot possibly interfere with each other. There is no shared memory to corrupt.
+
+---
+### The Map: Heap vs. Stack
+
+In Java, memory is divided into two main areas:
+
+1. **The Heap ( The "Shared Common Room" 🏟️):**
+    
+    - This is where **Objects** live.
+        
+    - Since our Servlet is an object, the **one instance** of `VisitorCountServlet` lives here.
+        
+    - **Crucial Point:** Any **instance variable** (like `private int visitorCount`) lives inside that object on the Heap. All threads share this space.
+        
+2. **The Stack ( The "Private Cubicle" 🔒):**
+    
+    - Every single Thread gets its own private Stack.
+        
+    - When a thread enters a method (like `doGet`), it creates a temporary block here called a "Frame."
+        
+    - **Crucial Point:** Any **local variable** (defined _inside_ the method) lives here. No other thread can see or touch your Stack.
+        
+
+---
+
+### Applying this to our "Broken" Code
+
+Remember our dangerous code?
+
+```java
+public class VisitorCountServlet ... {
+    int visitorCount = 0; // Instance Variable
+    
+    protected void doGet(...) { ... }
+}
+```
+
+1. **Thread A** starts `doGet`. It goes to the **Heap** to find `visitorCount`.
+    
+2. **Thread B** starts `doGet`. It goes to the **same spot in the Heap** to find `visitorCount`.
+    
+3. They collide! 💥
+    
+
+### The Stateless Fix
+
+Now, imagine we change the code to be **Stateless** by moving the variable _inside_ the method:
+
+```java
+public class SafeServlet extends HttpServlet {
+    // No instance variables here!
+    
+    protected void doGet(...) {
+        int tempCount = 0; // Local Variable
+        tempCount++;
+        response.getWriter().println(tempCount);
+    }
+}
+```
+
+Now, when Thread A enters doGet, it creates tempCount in its own private Stack.
+
+When Thread B enters doGet, it creates a completely separate tempCount in its own private Stack.
+
+They can't interfere because they are in different "cubicles."
+
+---
+

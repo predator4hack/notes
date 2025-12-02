@@ -61,13 +61,9 @@ This is how **WhatsApp** manages to handle millions of connections on a single s
 In a typical web server (like a social network or e-commerce site), what is the code actually doing?
 
 - **CPU Work (The "Doing"):** Parsing JSON, `if/else` logic, simple math.
-    
     - _Time taken:_ **Microseconds (0.000001s)**.
-        
 - **I/O Work (The "Waiting"):** Querying the Database, reading a file from disk, calling a 3rd party API (like Stripe).
-    
     - _Time taken:_ **Milliseconds (0.1s to 2.0s)**.
-        
 
 **Key Insight:** A modern CPU is so fast that 200ms (database wait) feels like **200 years** to the processor.
 
@@ -87,15 +83,10 @@ Let's visualize the "Single Thread" as a **Cashier** at a very busy coffee shop.
 - **Process:** You order a coffee.
     
     1. The Cashier (The Single Thread) takes your order. (CPU Work - Fast).
-        
     2. The Cashier shouts to the Barista (The Database/OS): _"Make a Latte for Order #1!"_ (I/O Request).
-        
     3. **CRITICAL STEP:** The Cashier does **not** wait for the coffee. They immediately turn to the next customer. _"Next please!"_
-        
     4. Eventually, the Barista yells _"Order #1 Ready!"_ (The Callback/Event).
-        
     5. The Cashier briefly pauses taking orders, grabs the coffee, hands it to you, and resumes taking orders.
-        
 
 ### 3. Answering your specific doubts
 
@@ -110,9 +101,7 @@ This allows one thread to handle thousands of requests per second, **provided th
 **However**, if a request comes in that requires heavy math (e.g., "Calculate the first 1 million prime numbers"), the Cashier is now solving a math problem on a notepad.
 
 - **Result:** The line stops moving. No one can order. The server effectively dies.
-    
 - **Lesson:** Never use Non-Blocking servers (like Node.js) for heavy computation (Video encoding, Image processing, Machine Learning).
-    
 
 #### Doubt B: "In the earlier method... a new worker thread is assigned."
 
@@ -123,9 +112,7 @@ It comes down to **Overhead**.
 Imagine the "Old Way" again. You have 1,000 customers, so you hire 1,000 Cashiers.
 
 1. **Context Switching:** The Manager (The OS) has to constantly run around deciding which Cashier gets to speak. "Cashier 1, you talk. Okay stop. Cashier 2, you talk." This management takes up 20% of the shop's energy.
-    
 2. **Memory:** 1,000 Cashiers need 1,000 uniforms and counters (Stack Memory). You run out of space in the shop (RAM).
-    
 
 The "Single Thread" model eliminates the management overhead. One guy. No switching. Maximum efficiency.
 
@@ -135,9 +122,7 @@ Here is how the code actually looks different, which explains the flow.
 
 **The Old Way (Blocking - Java/Python)**
 
-Java
-
-```
+```java
 // Thread #1 runs this:
 var user = request.getUser();         // Fast
 var data = database.query(user.id);   // SLOW! Thread BLOCKS here for 200ms.
@@ -147,9 +132,7 @@ return data;
 
 **The New Way (Non-Blocking - Node.js/JavaScript)**
 
-JavaScript
-
-```
+```javascript
 // The Single Thread runs this:
 var user = request.getUser();         // Fast
 
@@ -170,6 +153,64 @@ database.query(user.id, function(data) {
 - **Non-Blocking:** The thread tells the OS to fetch data and immediately moves to the next user. You only need one thread.
     
 - **The Risk:** If you do heavy **CPU calculation** in the Non-Blocking model, you block the only thread you have, and the server freezes.
-    
 
-**Would you like me to explain "Multiplexing" (how the OS monitors these thousands of background database requests at once)?**
+---
+### Servlet Containers & Non-Blocking I/O
+
+Most modern Java web servers have evolved to support Non-Blocking I/O (NIO), especially since the Servlet 3.1 specification introduced non-blocking I/O support.
+
+Here are the heavy hitters in the Java world that utilize this methodology:
+
+1. **Apache Tomcat:**
+    
+    - **Status:** The most popular container.
+        
+    - **Architecture:** Since Tomcat 8, the default connector is **NIO** (Non-blocking I/O). It uses the Poller/Selector model we discussed to manage connections, even if your servlet code looks "blocking" (standard synchronous Servlets).
+        
+2. **Eclipse Jetty:**
+    
+    - **Status:** Known for being lightweight and embeddable.1
+        
+    - **Architecture:** Jetty was a pioneer in asynchronous I/O.2 It is heavily optimized for long-lived connections (like WebSockets) where non-blocking is essential.
+        
+3. **Undertow (Red Hat):**
+    
+    - **Status:** The core of the WildFly (formerly JBoss) application server.3
+        
+    - **Architecture:** It is designed from the ground up to be fully non-blocking and extremely high-performance.
+        
+4. **Netty:**
+    
+    - **Note:** Netty is technically a _framework_, not a standard Servlet Container, but it is the engine powering many modern non-blocking web frameworks (like Spring WebFlux).4 It is the gold standard for non-blocking networking in Java.
+        
+
+### When should we use Blocking I/O?
+
+You might wonder, "If non-blocking is so efficient, why doesn't everyone use it all the time?"
+
+There are specific scenarios where the **Thread-per-Request (Blocking)** model is actually a better choice:
+
+- **CPU-Intensive Tasks:**
+    
+    - **The Scenario:** Your application performs heavy calculations, image processing, encryption, or video encoding.
+        
+    - **Why Blocking Wins:** In a non-blocking model, you often have very few threads (e.g., equal to the number of CPU cores). If one request hogs the CPU for 2 seconds to resize an image, **no other requests can be processed** during that time. The entire server "stutters."
+        
+    - **The Fix:** With a blocking model, that heavy request just occupies _one_ of your 200 threads. The OS can pause it and let other threads run, keeping the server responsive for everyone else.
+        
+- **Simple / Low-Traffic Applications:**
+    
+    - **The Scenario:** An internal dashboard for a company with only 50 users.
+        
+    - **Why Blocking Wins:** Writing non-blocking code (using callbacks or reactive streams) is significantly harder to debug and maintain than standard linear code. For small apps, the complexity isn't worth the performance gain.
+        
+- **Legacy Dependencies:**
+    
+    - **The Scenario:** Your application relies on older libraries (like older JDBC database drivers) that are inherently blocking.
+        
+    - **Why Blocking Wins:** If your database driver blocks the thread anyway, you lose many of the benefits of a non-blocking web layer.
+        
+
+---
+
+
