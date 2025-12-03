@@ -267,3 +267,189 @@ They can't interfere because they are in different "cubicles."
 
 ---
 
+---
+
+### Phase 1: Server Startup (The "Singleton" Phase)
+
+_This happens when you click "Run". No users are here yet._
+
+The Server (Tomcat) and Spring Boot wake up. They create the objects that will stay in memory forever.
+
+```java
+// PSEUDOCODE: Server Startup
+
+class TomcatServer {
+    // This Map is the "Container". It holds the Singletons.
+    Map<String, Servlet> servletMap = new HashMap<>();
+
+    void start() {
+        // 1. Spring Boot initializes.
+        // It creates ONE instance of your Controller (Singleton Pattern)
+        MyController myControllerInstance = new MyController();
+
+        // 2. Spring creates ONE instance of the DispatcherServlet
+        // and gives it the list of controllers.
+        DispatcherServlet mainServlet = new DispatcherServlet(myControllerInstance);
+
+        // 3. Tomcat stores this Single Servlet instance in its map.
+        // It links the URL "/" to this one object.
+        servletMap.put("/", mainServlet);
+
+        // 4. Now, start the infinite loop (Phase 2)
+        startListening();
+    }
+}
+```
+
+> **Key Takeaway:** Your Controller and the Servlet are **created now**. There is only one of them. They sit in memory waiting.
+
+---
+
+### Phase 2: The "While Loop" (The Network Phase)
+
+_This is the low-level server logic you correctly identified._
+
+```java
+// PSEUDOCODE: The Infinite Loop
+
+void startListening() {
+    // 1. Create the System Call to listen on port 8080
+    ServerSocket serverSocket = new ServerSocket(8080);
+
+    while(true) {
+        // 2. BLOCKING CALL: Wait here until a user connects.
+        // When a user hits the site, the OS gives us a distinct Client Socket.
+        Socket clientSocket = serverSocket.accept(); 
+
+        // 3. CONCURRENCY: We don't want to block the loop while processing.
+        // So, we create a NEW Thread for this specific user.
+        Thread userThread = new Thread(() -> {
+            handleRequest(clientSocket);
+        });
+        
+        userThread.start();
+    }
+}
+```
+
+> **Key Takeaway:** A new **Thread** and a new **Socket** are created for every single user. But the _Servlet object_ is not touched yet.
+
+---
+
+### Phase 3: The Connection (Where Thread meets Singleton)
+
+_This is inside the `handleRequest` method running on the new Thread._
+
+```java
+// PSEUDOCODE: Inside the User Thread
+
+void handleRequest(Socket clientSocket) {
+    // 1. READ inputs:
+    // Tomcat reads raw bytes from the socket (HTTP headers, body).
+    // It creates a new distinct Request Object for this specific user.
+    HttpServletRequest request = parseBytes(clientSocket);
+    HttpServletResponse response = new HttpServletResponse();
+
+    // 2. FIND the Singleton:
+    // Tomcat looks in its map. "Who handles '/'?"
+    // It finds the DispatcherServlet object we created in Phase 1.
+    Servlet theSingletonServlet = servletMap.get("/");
+
+    // 3. EXECUTE:
+    // *CRITICAL STEP*
+    // We are calling the method of the EXISTING object.
+    // We pass the NEW request object into the OLD Servlet object.
+    theSingletonServlet.service(request, response);
+
+    // 4. WRITE output:
+    // Convert response object back to bytes and write to clientSocket.
+    clientSocket.write(response.getBytes());
+    
+    // 5. CLEANUP:
+    // Thread dies. Request object is garbage collected.
+    // The Servlet object stays alive for the next user.
+}
+```
+
+---
+
+### Visualizing the "Singleton" vs "Thread"
+
+Imagine 3 users click your website at the exact same time.
+
+1. **Memory (The Heap):**
+    
+    - **1 Servlet Object** (The Spring `DispatcherServlet`).
+        
+    - **1 Controller Object** (Your `@RestController`).
+        
+2. **CPU (The Execution):**
+    
+    - **3 Threads** are running simultaneously.
+        
+    - **3 Request Objects** exist (User A's data, User B's data, User C's data).
+        
+
+The Magic:
+
+All 3 Threads enter the SAME Controller Object at the same time.
+
+```java
+// Your Code
+@RestController
+public class MyController {
+    
+    // This method is executed by 3 threads simultaneously!
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hi!";
+    }
+}
+```
+
+### Why does this matter? (The Danger Zone)
+
+Because the Controller is a **Singleton** (shared object), if you put a variable _outside_ the method, all 3 users will share it.
+
+**Bad Code (Not Thread Safe):**
+
+```java
+@RestController
+public class MyController {
+    int counter = 0; // BAD! Shared by all users.
+
+    @GetMapping("/count")
+    public int count() {
+        counter++; // User A might increment, then User B sees User A's number.
+        return counter;
+    }
+}
+```
+
+**Good Code (Thread Safe):**
+
+```java
+@RestController
+public class MyController {
+    
+    @GetMapping("/count")
+    public int count() {
+        int counter = 0; // GOOD. Created inside the method (Stack memory).
+        // It is unique to the Thread/User.
+        return counter++; 
+    }
+}
+```
+
+### Summary of Objects
+
+1. **Server Socket:** Created once (System level).
+    
+2. **Client Socket:** Created **per user** (passed to thread).
+    
+3. **Thread:** Created **per user** (or taken from a pool).
+    
+4. **Servlet/Controller:** Created **ONCE** (Singleton).
+    
+5. **Request/Response DTOs:** Created **per user** (passed _into_ the Singleton).
+    
