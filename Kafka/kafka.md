@@ -33,8 +33,6 @@ Kafka producer/client application decide which partition that the message should
 -   Messages with the same key will always go to the same partition.
 -   Within that partition, ordering of messages is guaranteed.
 
-Read More about how partitioner assigns messages to partitions in the link
-
 Intuitive Examples
 
 -   Many updates per entity: For a user activity stream, use user_id so login, purchase, logout all stay together and ordered per user.

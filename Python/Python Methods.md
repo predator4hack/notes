@@ -73,4 +73,3 @@ print(getattr(user2, "email", "Email not set")) # Output: bob@example.com
 
 In advanced programming, `getattr()` is part of a set of introspection tools (`hasattr()`, `setattr()`, `delattr()`) that allow a program to **inspect and modify its own structure** at runtime.
 
-
