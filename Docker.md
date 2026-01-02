@@ -40,10 +40,6 @@ Docker:
 └── Container3 -> App + Dependencies
 ```
 
-## Docker Lifecycle:
-
-￼
-
 ### Docker Deamon(dockerd)
 
 -   listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes.
@@ -53,5 +49,4 @@ Docker:
 
 -   When we use docker run, client sends commands to dockerd, which carries them out
 
-Dockerfile
 Dockerfile is a file where you provide the steps to build your Docker Image.

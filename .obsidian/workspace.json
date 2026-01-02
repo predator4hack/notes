@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Pydantic BaseModel.md",
+                "file": "Python/UV Package Manager Cheatsheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Pydantic BaseModel"
+              "title": "UV Package Manager Cheatsheet"
             }
           }
         ],
@@ -214,16 +214,19 @@
   },
   "active": "b4578683f220bc3c",
   "lastOpenFiles": [
+    "Python/Decorators.md",
+    "Python/UV Package Manager Cheatsheet.md",
     "Python/Python Methods.md",
     "Python/Pydantic BaseModel.md",
     "Python/Logging.md",
     "Python/First Class objects.md",
-    "Python/Decorators.md",
+    "Docker.md",
+    "AI Engineering/Interview Questions.md",
+    "AI Engineering",
     "Concurrency/Connecting Servers, sockets, servlet, servlet containers.md",
     "Kafka/kafka.md",
     "Kafka",
     "Hadoop-Arch.md",
-    "Docker.md",
     "Concurrency/Non Blocking IO.md",
     "Concurrency/Server.md",
     "Concurrency/Thread Safety.md",
