@@ -265,3 +265,241 @@ UV is particularly valuable when:
 ---
 
 **Tags**: #python #package-management #tools #development **Created**: 2026-01-02
+
+
+# Python Dependency Management Explained
+
+## What is `pyproject.toml`?
+
+`pyproject.toml` is the **modern, standardized configuration file** for Python projects (introduced in PEP 518). Think of it like `package.json` in Node.js - a single source of truth for your project.
+
+### Example:
+
+```toml
+[project]
+name = "my-awesome-app"
+version = "1.0.0"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "black>=23.0.0",
+]
+```
+
+## Why Two Different Package Lists?
+
+Python dependency management has evolved, leading to different patterns:
+
+### The Old Way: `requirements.txt`
+
+- Simple text file with exact versions
+- Mixes direct and transitive dependencies
+- Works directly with pip
+- Good for reproducibility but lacks structure
+
+```
+# requirements.txt
+requests==2.31.0
+beautifulsoup4==4.12.2
+pandas==2.1.3
+certifi==2023.7.22  # transitive dependency
+# ... 50+ more dependencies
+```
+
+### The New Way: `pyproject.toml`
+
+- Standard format (PEP 621)
+- All configuration in one place
+- Clear separation of direct dependencies
+- Makes your project installable
+- Tool configurations included
+
+## Is It Necessary to Have Both?
+
+**No!** Here are the recommended approaches:
+
+### Approach 1: Modern UV Workflow (Recommended)
+
+**Files you need:**
+
+- `pyproject.toml` - your direct dependencies
+- `uv.lock` - auto-generated lock file (like package-lock.json)
+
+```bash
+# Initialize project
+uv init my-project
+cd my-project
+
+# Add dependencies (updates pyproject.toml + uv.lock automatically)
+uv add requests beautifulsoup4 pandas
+uv add --dev pytest black
+
+# Run your app
+uv run python app.py
+```
+
+**Both files are auto-synced by UV!**
+
+### Approach 2: Legacy/Hybrid Workflow
+
+**Files you need:**
+
+- `requirements.in` - your direct dependencies
+- `requirements.txt` - generated lock file
+
+```bash
+# Compile lock file from requirements.in
+uv pip compile requirements.in -o requirements.txt
+
+# Install locked dependencies
+uv pip sync requirements.txt
+
+# Update everything
+uv pip compile requirements.in --upgrade -o requirements.txt
+```
+
+## How to Keep Them Synced?
+
+### Using Modern UV Projects (Auto-sync):
+
+```bash
+# Everything is automatic!
+uv add requests          # Updates pyproject.toml AND uv.lock
+uv remove requests       # Updates both files
+uv lock --upgrade        # Updates all dependencies
+```
+
+### Using requirements.in/txt Pattern:
+
+```bash
+# Regenerate requirements.txt from requirements.in
+uv pip compile requirements.in -o requirements.txt
+
+# Or update to latest versions
+uv pip compile requirements.in --upgrade -o requirements.txt
+```
+
+### Using Both pyproject.toml and requirements.txt:
+
+```bash
+# Generate requirements.txt from pyproject.toml
+uv pip compile pyproject.toml -o requirements.txt
+```
+
+## The Key Concept: Two Levels of Dependencies
+
+You need **TWO levels** for good dependency management:
+
+1. **High-level dependencies** (what you actually use)
+    
+    - In `pyproject.toml` or `requirements.in`
+    - Example: `requests>=2.28.0`
+2. **Locked dependencies** (exact versions of everything)
+    
+    - In `uv.lock` or `requirements.txt`
+    - Example: `requests==2.31.0, certifi==2023.7.22, ...`
+
+This separation lets you:
+
+- Express flexible requirements ("I need requests 2.x")
+- Ensure reproducibility (everyone gets exact same versions)
+
+## Complete Example: Web Scraper Project
+
+### Setup:
+
+```bash
+uv init price-scraper
+cd price-scraper
+uv add requests beautifulsoup4 pandas sqlalchemy
+uv add --dev pytest black ruff
+```
+
+### Your `pyproject.toml`:
+
+```toml
+[project]
+name = "price-scraper"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "beautifulsoup4>=4.12.3",
+    "pandas>=2.2.1",
+    "requests>=2.31.0",
+    "sqlalchemy>=2.0.28",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=24.2.0",
+    "pytest>=8.0.2",
+    "ruff>=0.3.0",
+]
+```
+
+### Daily Workflow:
+
+```bash
+# Clone and install
+git clone your-repo && cd your-repo
+uv sync
+
+# Run app
+uv run python scraper.py
+
+# Add new dependency (auto-updates both files)
+uv add openpyxl
+
+# Commit both files
+git add pyproject.toml uv.lock
+git commit -m "Add Excel export"
+```
+
+## What Should You Use?
+
+### For New Projects (2024+):
+
+```
+✅ pyproject.toml (direct dependencies)
+✅ uv.lock (auto-generated lock file)
+❌ requirements.txt (not needed)
+```
+
+### For Existing/Legacy Projects:
+
+```
+✅ requirements.in (direct dependencies)
+✅ requirements.txt (generated lock file)
+⚠️ pyproject.toml (optional but recommended)
+```
+
+## Quick Comparison Table
+
+|Feature|requirements.txt|pyproject.toml + uv.lock|
+|---|---|---|
+|Direct dependencies only|No (mixed)|Yes (in pyproject.toml)|
+|Exact version locking|Yes|Yes (in uv.lock)|
+|Auto-sync|Manual|Automatic with UV|
+|Project metadata|No|Yes|
+|Tool configuration|No|Yes|
+|Standard format|Informal|PEP 621 standard|
+|Best for|Legacy projects|Modern projects|
+
+## Key Takeaways
+
+1. **`pyproject.toml`** is the modern standard for Python projects
+2. You need both **high-level** (your deps) and **locked** (exact versions) files
+3. With **UV projects**, syncing is automatic - just use `uv add/remove`
+4. With **requirements.in/txt**, manually run `uv pip compile` to sync
+5. For new projects, use `pyproject.toml + uv.lock` - it's simpler and automatic
+
+---
+
+**Tags**: #python #dependency-management #packaging #uv #pyproject **Created**: 2026-01-02 **Related**: [[uv-package-manager-cheatsheet]]

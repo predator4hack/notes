@@ -27,16 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Logging.md",
+                "file": "Docker/Docker Multi-Stage Builds.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Logging"
+              "title": "Docker Multi-Stage Builds"
             }
           },
           {
-            "id": "b4578683f220bc3c",
+            "id": "eb30039958c51104",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -47,6 +47,20 @@
               },
               "icon": "lucide-file",
               "title": "UV Package Manager Cheatsheet"
+            }
+          },
+          {
+            "id": "b4578683f220bc3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Docker/Docker Multi-Stage Builds.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Docker Multi-Stage Builds"
             }
           }
         ],
@@ -212,15 +226,18 @@
       "bases:Create new base": false
     }
   },
-  "active": "b4578683f220bc3c",
+  "active": "eb30039958c51104",
   "lastOpenFiles": [
-    "Python/Decorators.md",
-    "Python/UV Package Manager Cheatsheet.md",
-    "Python/Python Methods.md",
-    "Python/Pydantic BaseModel.md",
+    "Python/Python Packages & Execution Modes.md",
+    "Docker/Docker Multi-Stage Builds.md",
     "Python/Logging.md",
+    "Docker/Docker.md",
+    "Docker",
+    "Python/UV Package Manager Cheatsheet.md",
+    "Python/Pydantic BaseModel.md",
     "Python/First Class objects.md",
-    "Docker.md",
+    "Python/Decorators.md",
+    "Python/Python Methods.md",
     "AI Engineering/Interview Questions.md",
     "AI Engineering",
     "Concurrency/Connecting Servers, sockets, servlet, servlet containers.md",
