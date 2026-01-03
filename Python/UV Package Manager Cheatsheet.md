@@ -173,6 +173,16 @@ uv add flask sqlalchemy
 uv run python app.py
 ```
 
+
+With `uv run python -m`:
+
+- UV checks if you're in a project directory
+- UV reads `pyproject.toml` and `uv.lock`
+- UV ensures the virtual environment exists and is synced
+- UV activates the environment
+- UV runs Python with your command
+- **Startup time: ~150-250ms** (UV overhead + Python startup)
+
 ### Migrating from pip
 
 ```bash

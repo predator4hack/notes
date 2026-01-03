@@ -206,13 +206,13 @@ Think of `__init__.py` as your package's **front door**:
 
 ### The Key Difference: `sys.path` Setup
 
-|Aspect|`python app.py`|`python -m module`|
-|---|---|---|
-|`sys.path[0]`|Directory containing script|Current working directory|
-|Treatment|Standalone script|Part of package|
-|`__name__`|`'__main__'`|`'__main__'`|
-|`__package__`|`None`|Package name (if in package)|
-|Relative imports|❌ Don't work|✅ Work correctly|
+| Aspect           | `python app.py`             | `python -m module`           |
+| ---------------- | --------------------------- | ---------------------------- |
+| `sys.path[0]`    | Directory containing script | Current working directory    |
+| Treatment        | Standalone script           | Part of package              |
+| `__name__`       | `'__main__'`                | `'__main__'`                 |
+| `__package__`    | `None`                      | Package name (if in package) |
+| Relative imports | ❌ Don't work                | ✅ Work correctly             |
 
 ---
 

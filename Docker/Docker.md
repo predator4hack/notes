@@ -2,7 +2,7 @@
 
 -   A containerisation platform
 -   Helps you Package applications along with everything they need(code, libraries, system tools, dependencies)
--   https://github.com/iam-veeramalla/Docker-Zero-to-Hero
+	-   https://github.com/iam-veeramalla/Docker-Zero-to-Hero
 
 Properties: - Lightweight (Don’t have complete OS, Base OS that is enough to create a virtual isolation from other containers running on the underlying OS) - Portability - runs same everywhere - Fast Startup - seconds vs minutes in VMs - Easy Scaling - runs multiple containers quickly
 
