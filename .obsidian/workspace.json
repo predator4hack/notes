@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Low Level Design/1. Introduction to LLD.md",
+                "file": "Kafka/Kafka Deep Dive - Core Concepts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Introduction to LLD"
+              "title": "Kafka Deep Dive - Core Concepts"
             }
           },
           {
@@ -228,8 +228,10 @@
   },
   "active": "eb30039958c51104",
   "lastOpenFiles": [
-    "Python/UV Package Manager Cheatsheet.md",
+    "Kafka/kafka.md",
+    "Kafka/Kafka Deep Dive - Core Concepts.md",
     "Low Level Design/1. Introduction to LLD.md",
+    "Python/UV Package Manager Cheatsheet.md",
     "Low Level Design",
     "Spring-Boot.md",
     "Docker/Docker Command Cheatsheet.md",
@@ -245,7 +247,6 @@
     "AI Engineering/Interview Questions.md",
     "AI Engineering",
     "Concurrency/Connecting Servers, sockets, servlet, servlet containers.md",
-    "Kafka/kafka.md",
     "Kafka",
     "Hadoop-Arch.md",
     "Concurrency/Non Blocking IO.md",
@@ -260,7 +261,6 @@
     "Python",
     "Daily",
     "Spark.md",
-    "YARN.md",
     "Linux"
   ]
 }
