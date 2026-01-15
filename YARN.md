@@ -11,3 +11,5 @@ Think of a big conference center:
 -   ApplicationMaster (AM) = the organizer of one specific event (e.g., “Spark job” or “Hive query”).
 -   Container = a room booking (e.g., “2 hours in Room 3 with 4 tables and a projector”)—i.e., a bundle of resources (memory, vcores, optionally GPUs).
 -   Tasks = the sessions that run inside the booked rooms.
+
+
