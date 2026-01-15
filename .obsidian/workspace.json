@@ -1,284 +1,277 @@
 {
-  "main": {
-    "id": "4c82446289e124d5",
-    "type": "split",
-    "children": [
-      {
-        "id": "903d943c47187e7a",
-        "type": "tabs",
+    "main": {
+        "id": "4c82446289e124d5",
+        "type": "split",
         "children": [
-          {
-            "id": "49e2073f428227b6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Python/Pytorch methods.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-<<<<<<< HEAD
-              "title": "Pytorch methods"
-=======
-              "title": "Deb file Vs AppImage"
+            {
+                "id": "903d943c47187e7a",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "49e2073f428227b6",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "Python/Pytorch methods.md",
+                                "mode": "source",
+                                "source": false
+                            },
+                            "icon": "lucide-file",
+                            "title": "Deb file Vs AppImage"
+                        }
+                    },
+                    {
+                        "id": "5fdfae432e261197",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "Docker/Docker Multi-Stage Builds.md",
+                                "mode": "source",
+                                "source": false
+                            },
+                            "icon": "lucide-file",
+                            "title": "Docker Multi-Stage Builds"
+                        }
+                    },
+                    {
+                        "id": "eb30039958c51104",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "YARN.md",
+                                "mode": "source",
+                                "source": false
+                            },
+                            "icon": "lucide-file",
+                            "title": "YARN"
+                        }
+                    },
+                    {
+                        "id": "b4578683f220bc3c",
+                        "type": "leaf",
+                        "state": {
+                            "type": "markdown",
+                            "state": {
+                                "file": "Docker/Docker Multi-Stage Builds.md",
+                                "mode": "source",
+                                "source": false
+                            },
+                            "icon": "lucide-file",
+                            "title": "Docker Multi-Stage Builds"
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "id": "5fdfae432e261197",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docker/Docker Multi-Stage Builds.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Docker Multi-Stage Builds"
-            }
-          },
-          {
-            "id": "eb30039958c51104",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "YARN.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "YARN"
-            }
-          },
-          {
-            "id": "b4578683f220bc3c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Docker/Docker Multi-Stage Builds.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Docker Multi-Stage Builds"
->>>>>>> dfcddb3a98eb549b7403f11546930e556dea18c0
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "vertical"
-  },
-  "left": {
-    "id": "cbe2e092e5714069",
-    "type": "split",
-    "children": [
-      {
-        "id": "98a16199b5793e66",
-        "type": "tabs",
+        ],
+        "direction": "vertical"
+    },
+    "left": {
+        "id": "cbe2e092e5714069",
+        "type": "split",
         "children": [
-          {
-            "id": "ddc292f413a7faf7",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
+            {
+                "id": "98a16199b5793e66",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "ddc292f413a7faf7",
+                        "type": "leaf",
+                        "state": {
+                            "type": "file-explorer",
+                            "state": {
+                                "sortOrder": "alphabetical",
+                                "autoReveal": false
+                            },
+                            "icon": "lucide-folder-closed",
+                            "title": "Files"
+                        }
+                    },
+                    {
+                        "id": "8600f60a27675b24",
+                        "type": "leaf",
+                        "state": {
+                            "type": "search",
+                            "state": {
+                                "query": "",
+                                "matchingCase": false,
+                                "explainSearch": false,
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical"
+                            },
+                            "icon": "lucide-search",
+                            "title": "Search"
+                        }
+                    },
+                    {
+                        "id": "6c063d32246ae3e3",
+                        "type": "leaf",
+                        "state": {
+                            "type": "bookmarks",
+                            "state": {},
+                            "icon": "lucide-bookmark",
+                            "title": "Bookmarks"
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "id": "8600f60a27675b24",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              },
-              "icon": "lucide-search",
-              "title": "Search"
-            }
-          },
-          {
-            "id": "6c063d32246ae3e3",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 200
-  },
-  "right": {
-    "id": "80ba9b232d8cc7fd",
-    "type": "split",
-    "children": [
-      {
-        "id": "948da3ee9e6f2547",
-        "type": "tabs",
+        ],
+        "direction": "horizontal",
+        "width": 200
+    },
+    "right": {
+        "id": "80ba9b232d8cc7fd",
+        "type": "split",
         "children": [
-          {
-            "id": "e45f1676e15fbaaa",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Welcome.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks for Welcome"
+            {
+                "id": "948da3ee9e6f2547",
+                "type": "tabs",
+                "children": [
+                    {
+                        "id": "e45f1676e15fbaaa",
+                        "type": "leaf",
+                        "state": {
+                            "type": "backlink",
+                            "state": {
+                                "file": "Welcome.md",
+                                "collapseAll": false,
+                                "extraContext": false,
+                                "sortOrder": "alphabetical",
+                                "showSearch": false,
+                                "searchQuery": "",
+                                "backlinkCollapsed": false,
+                                "unlinkedCollapsed": true
+                            },
+                            "icon": "links-coming-in",
+                            "title": "Backlinks for Welcome"
+                        }
+                    },
+                    {
+                        "id": "4f3466b7e59c6775",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outgoing-link",
+                            "state": {
+                                "file": "Welcome.md",
+                                "linksCollapsed": false,
+                                "unlinkedCollapsed": true
+                            },
+                            "icon": "links-going-out",
+                            "title": "Outgoing links from Welcome"
+                        }
+                    },
+                    {
+                        "id": "507a0943fef22742",
+                        "type": "leaf",
+                        "state": {
+                            "type": "tag",
+                            "state": {
+                                "sortOrder": "frequency",
+                                "useHierarchy": true,
+                                "showSearch": false,
+                                "searchQuery": ""
+                            },
+                            "icon": "lucide-tags",
+                            "title": "Tags"
+                        }
+                    },
+                    {
+                        "id": "fe1f03e38a46d974",
+                        "type": "leaf",
+                        "state": {
+                            "type": "all-properties",
+                            "state": {
+                                "sortOrder": "frequency",
+                                "showSearch": false,
+                                "searchQuery": ""
+                            },
+                            "icon": "lucide-archive",
+                            "title": "All properties"
+                        }
+                    },
+                    {
+                        "id": "4a9a7ae4f3c278cc",
+                        "type": "leaf",
+                        "state": {
+                            "type": "outline",
+                            "state": {
+                                "file": "Welcome.md",
+                                "followCursor": false,
+                                "showSearch": false,
+                                "searchQuery": ""
+                            },
+                            "icon": "lucide-list",
+                            "title": "Outline of Welcome"
+                        }
+                    }
+                ]
             }
-          },
-          {
-            "id": "4f3466b7e59c6775",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "Welcome.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links from Welcome"
-            }
-          },
-          {
-            "id": "507a0943fef22742",
-            "type": "leaf",
-            "state": {
-              "type": "tag",
-              "state": {
-                "sortOrder": "frequency",
-                "useHierarchy": true,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-tags",
-              "title": "Tags"
-            }
-          },
-          {
-            "id": "fe1f03e38a46d974",
-            "type": "leaf",
-            "state": {
-              "type": "all-properties",
-              "state": {
-                "sortOrder": "frequency",
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-archive",
-              "title": "All properties"
-            }
-          },
-          {
-            "id": "4a9a7ae4f3c278cc",
-            "type": "leaf",
-            "state": {
-              "type": "outline",
-              "state": {
-                "file": "Welcome.md",
-                "followCursor": false,
-                "showSearch": false,
-                "searchQuery": ""
-              },
-              "icon": "lucide-list",
-              "title": "Outline of Welcome"
-            }
-          }
-        ]
-      }
-    ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  },
-  "left-ribbon": {
-    "hiddenItems": {
-      "switcher:Open quick switcher": false,
-      "graph:Open graph view": false,
-      "canvas:Create new canvas": false,
-      "daily-notes:Open today's daily note": false,
-      "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "bases:Create new base": false
-    }
-  },
-  "active": "49e2073f428227b6",
-  "lastOpenFiles": [
-<<<<<<< HEAD
-=======
-    "Kafka/Kafka Deep Dive - Core Concepts.md",
-    "Kafka/kafka.md",
-    "Low Level Design/1. Introduction to LLD.md",
-    "Python/UV Package Manager Cheatsheet.md",
-    "Low Level Design",
-    "Spring-Boot.md",
-    "Docker/Docker Command Cheatsheet.md",
-    "Docker/Docker.md",
-    "Python/Python Packages & Execution Modes.md",
->>>>>>> dfcddb3a98eb549b7403f11546930e556dea18c0
-    "Python/Python Methods.md",
-    "Python/Pytorch methods.md",
-    "Papers/Flash Attention.md",
-    "Linux/Deb file Vs AppImage.md",
-    "Spark.md",
-    "Papers",
-    "Spring-Boot.md",
-    "Untitled.canvas",
-    "Python/UV Package Manager Cheatsheet.md",
-    "Python/Python Packages & Execution Modes.md",
-    "Python/Pydantic BaseModel.md",
-    "Python/First Class objects.md",
-    "Python/Decorators.md",
-    "Low Level Design/1. Introduction to LLD.md",
-    "Low Level Design",
-    "Kafka/kafka.md",
-    "Kafka/Kafka Deep Dive - Core Concepts.md",
-    "Kafka",
-    "Docker/Docker Command Cheatsheet.md",
-    "Docker/Docker.md",
-    "Docker/Docker Multi-Stage Builds.md",
-    "Docker",
-    "AI Engineering/Interview Questions.md",
-    "AI Engineering",
-    "Reiforcement Learning/Untitled.md",
-    "Concurrency/Thread Safety.md",
-    "Reiforcement Learning",
-    "Concurrency/Spring Boot Vs Spring MVC Vs Spring WebFlux.md",
-    "Concurrency/Socket.md",
-    "Concurrency/Server.md",
-    "Concurrency/Servlet.md",
-    "Concurrency/Non Blocking IO.md",
-    "Concurrency/Cores & Multithreading.md",
-    "Untitled",
-    "Concurrency",
-    "Python",
-    "Daily"
-  ]
+        ],
+        "direction": "horizontal",
+        "width": 300,
+        "collapsed": true
+    },
+    "left-ribbon": {
+        "hiddenItems": {
+            "switcher:Open quick switcher": false,
+            "graph:Open graph view": false,
+            "canvas:Create new canvas": false,
+            "daily-notes:Open today's daily note": false,
+            "templates:Insert template": false,
+            "command-palette:Open command palette": false,
+            "bases:Create new base": false
+        }
+    },
+    "active": "49e2073f428227b6",
+    "lastOpenFiles": [
+        "Kafka/Kafka Deep Dive - Core Concepts.md",
+        "Kafka/kafka.md",
+        "Low Level Design/1. Introduction to LLD.md",
+        "Python/UV Package Manager Cheatsheet.md",
+        "Low Level Design",
+        "Spring-Boot.md",
+        "Docker/Docker Command Cheatsheet.md",
+        "Docker/Docker.md",
+        "Python/Python Packages & Execution Modes.md",
+        "Python/Python Methods.md",
+        "Python/Pytorch methods.md",
+        "Papers/Flash Attention.md",
+        "Linux/Deb file Vs AppImage.md",
+        "Spark.md",
+        "Papers",
+        "Spring-Boot.md",
+        "Untitled.canvas",
+        "Python/UV Package Manager Cheatsheet.md",
+        "Python/Python Packages & Execution Modes.md",
+        "Python/Pydantic BaseModel.md",
+        "Python/First Class objects.md",
+        "Python/Decorators.md",
+        "Low Level Design/1. Introduction to LLD.md",
+        "Low Level Design",
+        "Kafka/kafka.md",
+        "Kafka/Kafka Deep Dive - Core Concepts.md",
+        "Kafka",
+        "Docker/Docker Command Cheatsheet.md",
+        "Docker/Docker.md",
+        "Docker/Docker Multi-Stage Builds.md",
+        "Docker",
+        "AI Engineering/Interview Questions.md",
+        "AI Engineering",
+        "Reiforcement Learning/Untitled.md",
+        "Concurrency/Thread Safety.md",
+        "Reiforcement Learning",
+        "Concurrency/Spring Boot Vs Spring MVC Vs Spring WebFlux.md",
+        "Concurrency/Socket.md",
+        "Concurrency/Server.md",
+        "Concurrency/Servlet.md",
+        "Concurrency/Non Blocking IO.md",
+        "Concurrency/Cores & Multithreading.md",
+        "Untitled",
+        "Concurrency",
+        "Python",
+        "Daily"
+    ]
 }
