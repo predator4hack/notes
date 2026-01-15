@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Kafka/Kafka Deep Dive - Core Concepts.md",
+                "file": "YARN.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Kafka Deep Dive - Core Concepts"
+              "title": "YARN"
             }
           },
           {
@@ -228,8 +228,8 @@
   },
   "active": "eb30039958c51104",
   "lastOpenFiles": [
-    "Kafka/kafka.md",
     "Kafka/Kafka Deep Dive - Core Concepts.md",
+    "Kafka/kafka.md",
     "Low Level Design/1. Introduction to LLD.md",
     "Python/UV Package Manager Cheatsheet.md",
     "Low Level Design",
