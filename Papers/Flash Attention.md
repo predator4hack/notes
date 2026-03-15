@@ -15,7 +15,7 @@ All **SRAM** and **DRAM (including HBM)** are **volatile memories**.
 
 Now, in the **GPU + Fast Attention** context:
 ### 🏗️ GPU Memory Hierarchy
-1. **Registers / SRAM (On-chip)**
+1. **Registers / SRAM (On-chip)**d
     - Closest to GPU cores (streaming multiprocessors).
     - Tiny but _blazing fast_ — stores intermediate computations like attention weights or matrix tiles.
     - Bandwidth in **terabytes/sec** range, but capacity is only a few **MB per GPU**.
