@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/CPython Internals.md",
+                "file": "Python/Python Concurrency & Architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CPython Internals"
+              "title": "Python Concurrency & Architecture"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/CPython Internals.md",
+                "file": "Python/Python Concurrency & Architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CPython Internals"
+              "title": "Backlinks for Python Concurrency & Architecture"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/CPython Internals.md",
+                "file": "Python/Python Concurrency & Architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CPython Internals"
+              "title": "Outgoing links from Python Concurrency & Architecture"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/CPython Internals.md",
+                "file": "Python/Python Concurrency & Architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CPython Internals"
+              "title": "Outline of Python Concurrency & Architecture"
             }
           },
           {
@@ -224,11 +224,12 @@
   },
   "active": "f5a1a3f84dd5f9fb",
   "lastOpenFiles": [
-    "Python/First Class objects.md",
+    "Python/CPython Internals.md",
+    "Python/Python Concurrency & Architecture.md",
     "Python/Python Methods.md",
     "Python/Pydantic BaseModel.md",
+    "Python/First Class objects.md",
     "Python/Logging.md",
-    "Python/CPython Internals.md",
     "Python/__pycache__.md",
     "Untitled.md",
     "Deep Learning",
