@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Python/Python Concurrency & Architecture.md",
+                "file": "OS/Processes vs. Threads.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Python Concurrency & Architecture"
+              "title": "Processes vs. Threads"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Python/Python Concurrency & Architecture.md",
+                "file": "OS/Processes vs. Threads.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Python Concurrency & Architecture"
+              "title": "Backlinks for Processes vs. Threads"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Python/Python Concurrency & Architecture.md",
+                "file": "OS/Processes vs. Threads.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Python Concurrency & Architecture"
+              "title": "Outgoing links from Processes vs. Threads"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Python/Python Concurrency & Architecture.md",
+                "file": "OS/Processes vs. Threads.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Python Concurrency & Architecture"
+              "title": "Outline of Processes vs. Threads"
             }
           },
           {
@@ -224,8 +224,11 @@
   },
   "active": "f5a1a3f84dd5f9fb",
   "lastOpenFiles": [
-    "Python/CPython Internals.md",
+    "copilot/copilot-conversations/Could_you_please_create_notes_for_me_explaining_the_following@20260316_112605.md",
     "Python/Python Concurrency & Architecture.md",
+    "OS/Processes vs. Threads.md",
+    "OS",
+    "Python/CPython Internals.md",
     "Python/Python Methods.md",
     "Python/Pydantic BaseModel.md",
     "Python/First Class objects.md",
@@ -251,15 +254,12 @@
     "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts/Generate table of contents.md",
     "copilot/copilot-custom-prompts/Make longer.md",
-    "copilot/copilot-custom-prompts/Make shorter.md",
-    "copilot/copilot-custom-prompts/Emojify.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "aiohttp",
     "Excalidraw",
     "Low Level Design",
     "Papers",
-    "Untitled.canvas",
-    "Low Level Design"
+    "Untitled.canvas"
   ]
 }

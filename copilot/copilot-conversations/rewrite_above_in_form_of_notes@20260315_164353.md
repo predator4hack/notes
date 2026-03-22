@@ -10,7 +10,7 @@ tags:
 ---
 
 **user**: rewrite above in form of notes
-[Context: Notes: Python/Decorators.md]
+[Context: Notes: Python/Python Decorators & Class Methods.md]
 [Timestamp: 2026/03/15 16:43:53]
 
 **ai**: Here's a rewrite of your note on Python Decorators and Class Methods in a more concise, note-like format:
