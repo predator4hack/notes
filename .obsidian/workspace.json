@@ -13,15 +13,28 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OS/Processes vs. Threads.md",
+                "file": "Low Level Design/1. Introduction to LLD.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Processes vs. Threads"
+              "title": "1. Introduction to LLD"
+            }
+          },
+          {
+            "id": "bb57863287c998be",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Low Level Design/LLD.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "LLD.excalidraw"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -94,7 +107,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OS/Processes vs. Threads.md",
+                "file": "Low Level Design/LLD.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +117,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Processes vs. Threads"
+              "title": "Backlinks for LLD.excalidraw"
             }
           },
           {
@@ -113,12 +126,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OS/Processes vs. Threads.md",
+                "file": "Low Level Design/LLD.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Processes vs. Threads"
+              "title": "Outgoing links from LLD.excalidraw"
             }
           },
           {
@@ -156,13 +169,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OS/Processes vs. Threads.md",
+                "file": "Low Level Design/LLD.excalidraw.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Processes vs. Threads"
+              "title": "Outline of LLD.excalidraw"
             }
           },
           {
@@ -200,7 +213,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 414.5
+    "width": 414.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -222,11 +236,13 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "f5a1a3f84dd5f9fb",
+  "active": "ddc292f413a7faf7",
   "lastOpenFiles": [
+    "Low Level Design/1. Introduction to LLD.md",
+    "Low Level Design/LLD.excalidraw.md",
+    "OS/Processes vs. Threads.md",
     "copilot/copilot-conversations/Could_you_please_create_notes_for_me_explaining_the_following@20260316_112605.md",
     "Python/Python Concurrency & Architecture.md",
-    "OS/Processes vs. Threads.md",
     "OS",
     "Python/CPython Internals.md",
     "Python/Python Methods.md",
@@ -252,8 +268,6 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
     "copilot/copilot-custom-prompts/Generate glossary.md",
-    "copilot/copilot-custom-prompts/Generate table of contents.md",
-    "copilot/copilot-custom-prompts/Make longer.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "aiohttp",
