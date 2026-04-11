@@ -238,8 +238,10 @@
   },
   "active": "ddc292f413a7faf7",
   "lastOpenFiles": [
-    "Low Level Design/1. Introduction to LLD.md",
+    "raw/assets",
+    "raw",
     "Low Level Design/LLD.excalidraw.md",
+    "Low Level Design/1. Introduction to LLD.md",
     "OS/Processes vs. Threads.md",
     "copilot/copilot-conversations/Could_you_please_create_notes_for_me_explaining_the_following@20260316_112605.md",
     "Python/Python Concurrency & Architecture.md",
@@ -267,13 +269,11 @@
     "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
     "copilot/copilot-custom-prompts/Rewrite as tweet.md",
     "copilot/copilot-custom-prompts/Remove URLs.md",
-    "copilot/copilot-custom-prompts/Generate glossary.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "aiohttp",
     "Excalidraw",
     "Low Level Design",
-    "Papers",
     "Untitled.canvas"
   ]
 }
