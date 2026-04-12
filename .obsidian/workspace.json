@@ -25,12 +25,14 @@
             "id": "bb57863287c998be",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Low Level Design/LLD.excalidraw.md"
+                "file": "Spring-Boot.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "excalidraw-icon",
-              "title": "LLD.excalidraw"
+              "icon": "lucide-file",
+              "title": "Spring-Boot"
             }
           }
         ],
@@ -236,11 +238,19 @@
       "copilot:Open Copilot Chat": false
     }
   },
-  "active": "ddc292f413a7faf7",
+  "active": "bb57863287c998be",
   "lastOpenFiles": [
+    "Spark.md",
+    "Python Memory Management.md",
+    "CLAUDE.md",
+    "index.md",
+    "Hadoop-Arch.md",
+    "Low Level Design/LLD.excalidraw.md",
+    "log.md",
+    "Reinforcement Learning/Untitled.md",
+    "Reinforcement Learning",
     "raw/assets",
     "raw",
-    "Low Level Design/LLD.excalidraw.md",
     "Low Level Design/1. Introduction to LLD.md",
     "OS/Processes vs. Threads.md",
     "copilot/copilot-conversations/Could_you_please_create_notes_for_me_explaining_the_following@20260316_112605.md",
@@ -258,22 +268,14 @@
     "Python/Python Packages & Execution Modes.md",
     "Python/Python Decorators & Class Methods.md",
     "copilot/copilot-conversations/rewrite_above_in_form_of_notes@20260315_164353.md",
-    "Python Memory Management.md",
     "copilot/memory/Recent Conversations.md",
     "copilot/copilot-conversations/create_detailed_notes_about_the_cpython,_cover_in_detail@20260315_151119.md",
     "copilot/memory",
     "copilot/copilot-conversations/Create_notes_about_cpython,_cover_everything_in_depth@20260315_150603.md",
     "copilot/copilot-conversations",
-    "copilot/copilot-custom-prompts/Clip Web Page.md",
-    "copilot/copilot-custom-prompts/Clip YouTube Transcript.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet thread.md",
-    "copilot/copilot-custom-prompts/Rewrite as tweet.md",
-    "copilot/copilot-custom-prompts/Remove URLs.md",
     "copilot/copilot-custom-prompts",
     "copilot",
     "aiohttp",
-    "Excalidraw",
-    "Low Level Design",
     "Untitled.canvas"
   ]
 }
