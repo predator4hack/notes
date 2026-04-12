@@ -1,3 +1,16 @@
+---
+title: "Spring Boot & Java"
+type: concept
+tags:
+  - spring-boot
+  - java
+  - backend
+created: 2025-10-01
+updated: 2025-10-01
+sources: []
+aliases: []
+---
+
 # Spring Boot & Java
 
 ## The World Before Spring
@@ -35,3 +48,7 @@ With Spring Boot: your app carries a tiny web server inside it (embedded Tomcat/
 -   Build: mvn spring-boot:repackage → a fat JAR with embedded Tomcat/Jetty.
 -   Containerize: create an OCI image and push to a registry.
 -   Run: one container per app instance; scale by running more containers.
+
+## Related
+
+- [[Concurrency/Spring Boot Vs Spring MVC Vs Spring WebFlux|Spring Boot vs Spring MVC vs Spring WebFlux]]

@@ -1,3 +1,15 @@
+---
+title: "Python Methods"
+type: reference
+tags:
+  - python
+  - methods
+created: 2025-12-01
+updated: 2025-12-14
+sources: []
+aliases: []
+---
+
 
 ## getattr()
 
@@ -73,3 +85,7 @@ print(getattr(user2, "email", "Email not set")) # Output: bob@example.com
 
 In advanced programming, `getattr()` is part of a set of introspection tools (`hasattr()`, `setattr()`, `delattr()`) that allow a program to **inspect and modify its own structure** at runtime.
 
+## Related
+
+- [[Python/First Class objects|First Class Objects]]
+- [[Python/CPython Internals|CPython Internals]]

@@ -1,3 +1,15 @@
+---
+title: "Deb Files vs AppImage"
+type: concept
+tags:
+  - linux
+  - packaging
+created: 2025-11-23
+updated: 2025-11-23
+sources: []
+aliases: []
+---
+
 
 ## 📦 What is a .deb File?
 

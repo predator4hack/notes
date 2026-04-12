@@ -1,3 +1,16 @@
+---
+title: "Hadoop Architecture"
+type: architecture
+tags:
+  - hadoop
+  - big-data
+  - distributed-systems
+created: 2025-10-01
+updated: 2025-10-02
+sources: []
+aliases: []
+---
+
 # Architecture
 
 ![img](./assets/Screenshot%202025-09-30%20at%201.43.55 AM.png)
@@ -66,3 +79,8 @@ How it works:
     -   NodeManager (YARN compute service)
 -   When Spark requests resources from YARN, YARN tries to allocate containers on nodes where the data already exists
 -   Spark executors run in containers on these same nodes
+
+## Related
+
+- [[YARN]]
+- [[Spark]]

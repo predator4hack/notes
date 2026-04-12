@@ -1,3 +1,17 @@
+---
+title: "Python Concurrency & Architecture"
+type: concept
+tags:
+  - python
+  - concurrency
+  - gil
+  - multithreading
+created: 2026-03-16
+updated: 2026-03-16
+sources: []
+aliases: []
+---
+
 
 ## 1. The Core Concept: Threads vs. Processes
 
@@ -167,3 +181,9 @@ for t in threads: t.join()
 print(f"Final value of x: {x}") # This will always be 200,000
 ```
 
+## Related
+
+- [[Python/CPython Internals|CPython Internals]]
+- [[Concurrency/Cores & Multithreading|Cores & Multithreading]]
+- [[OS/Processes vs. Threads|Processes vs. Threads]]
+- [[Concurrency/Thread Safety|Thread Safety]]

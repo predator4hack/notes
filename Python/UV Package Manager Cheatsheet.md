@@ -1,3 +1,17 @@
+---
+title: "UV Package Manager Cheatsheet"
+type: reference
+tags:
+  - python
+  - uv
+  - dependency-management
+  - packaging
+created: 2026-01-02
+updated: 2026-01-03
+sources: []
+aliases: []
+---
+
 
 
 ## Overview
@@ -512,4 +526,6 @@ git commit -m "Add Excel export"
 
 ---
 
-**Tags**: #python #dependency-management #packaging #uv #pyproject **Created**: 2026-01-02 **Related**: [[uv-package-manager-cheatsheet]]
+## Related
+
+- [[Docker/Docker Multi-Stage Builds|Docker Multi-Stage Builds]]

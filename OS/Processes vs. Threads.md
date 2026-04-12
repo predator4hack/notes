@@ -1,3 +1,17 @@
+---
+title: "Processes vs. Threads"
+type: concept
+tags:
+  - os
+  - concurrency
+  - processes
+  - threads
+created: 2026-03-22
+updated: 2026-03-22
+sources: []
+aliases: []
+---
+
 ## 1. What a Process Is
 
 A **process** is an independent execution unit that the operating system (OS) manages. Think of it as a self-contained program in execution. When you launch an application (e.g., a web browser, a text editor, or a Python script), the OS creates a new process for it.
@@ -159,3 +173,9 @@ Here's why it exists and its implications:
 *   **Workarounds for CPU-Bound Parallelism:** To achieve true parallelism for CPU-bound tasks in Python, developers typically use the `multiprocessing` module, which spawns separate processes (each with its own Python interpreter and GIL), or rely on C extensions that release the GIL during their execution.
 
 In essence, the GIL is a mutex that protects access to Python objects, ensuring that only one native thread can execute Python bytecode at any given time. It's a design choice that simplifies the interpreter's implementation but limits the effectiveness of Python's native threading for CPU-bound workloads.
+
+## Related
+
+- [[Concurrency/Cores & Multithreading|Cores & Multithreading]]
+- [[Concurrency/Thread Safety|Thread Safety]]
+- [[Python/Python Concurrency & Architecture|Python Concurrency & Architecture]]

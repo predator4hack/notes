@@ -1,3 +1,16 @@
+---
+title: "Docker"
+type: concept
+tags:
+  - docker
+  - devops
+  - containers
+created: 2026-01-03
+updated: 2026-01-03
+sources: []
+aliases: []
+---
+
 # Docker
 
 -   A containerisation platform
@@ -50,3 +63,8 @@ Docker:
 -   When we use docker run, client sends commands to dockerd, which carries them out
 
 Dockerfile is a file where you provide the steps to build your Docker Image.
+
+## Related
+
+- [[Docker/Docker Multi-Stage Builds|Docker Multi-Stage Builds]]
+- [[Docker/Docker Command Cheatsheet|Docker Command Cheatsheet]]

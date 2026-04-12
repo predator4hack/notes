@@ -1,3 +1,17 @@
+---
+title: "Spring Boot vs Spring MVC vs Spring WebFlux"
+type: concept
+tags:
+  - spring-boot
+  - java
+  - concurrency
+  - webflux
+created: 2025-12-02
+updated: 2025-12-03
+sources: []
+aliases: []
+---
+
 
 ---
 
@@ -117,3 +131,8 @@ Spring Boot  →  Embedded Tomcat  →  Spring WebFlux (bridged via Servlet 3.1 
     
 ---
 
+## Related
+
+- [[Spring-Boot|Spring Boot & Java]]
+- [[Concurrency/Servlet|Servlet]]
+- [[Concurrency/Non Blocking IO|Non-Blocking IO]]

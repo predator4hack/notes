@@ -1,3 +1,17 @@
+---
+title: "AI Engineering Interview Questions"
+type: reference
+tags:
+  - ai-engineering
+  - interview
+  - rag
+  - ml
+created: 2026-01-02
+updated: 2026-01-02
+sources: []
+aliases: []
+---
+
 
 Q. Your RAG system is hallucinating in production. How do you diagnose what's broken - the retriever or the generator?
 Ans: The fundamental insight: 

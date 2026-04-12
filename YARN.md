@@ -1,3 +1,19 @@
+---
+title: "YARN"
+type: architecture
+tags:
+  - yarn
+  - hadoop
+  - big-data
+  - distributed-systems
+created: 2025-10-01
+updated: 2026-01-15
+sources:
+  - https://www.youtube.com/watch?v=5vmP1-6xd6Y&t=101s
+aliases:
+  - Yet Another Resource Negotiator
+---
+
 # YARN
 
 -   https://www.youtube.com/watch?v=5vmP1-6xd6Y&t=101s
@@ -12,4 +28,7 @@ Think of a big conference center:
 -   Container = a room booking (e.g., “2 hours in Room 3 with 4 tables and a projector”)—i.e., a bundle of resources (memory, vcores, optionally GPUs).
 -   Tasks = the sessions that run inside the booked rooms.
 
+## Related
 
+- [[Hadoop-Arch|Hadoop Architecture]]
+- [[Spark]]

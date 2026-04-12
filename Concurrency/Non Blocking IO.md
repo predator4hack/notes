@@ -1,3 +1,17 @@
+---
+title: "Non-Blocking IO"
+type: concept
+tags:
+  - concurrency
+  - networking
+  - async
+  - io
+created: 2025-12-01
+updated: 2025-12-02
+sources: []
+aliases: []
+---
+
 You asked: _"How do modern servers handle huge connections?"_
 
 The model we just discussed (Thread-per-Request) hits a wall called the **C10k Problem** (10,000 concurrent connections). You cannot create 10,000 threads because your RAM will explode.
@@ -213,4 +227,9 @@ There are specific scenarios where the **Thread-per-Request (Blocking)** model i
 
 ---
 
+## Related
 
+- [[Concurrency/Server|Server]]
+- [[Concurrency/Socket|Socket]]
+- [[Concurrency/Servlet|Servlet]]
+- [[Concurrency/Spring Boot Vs Spring MVC Vs Spring WebFlux|Spring Boot vs Spring MVC vs Spring WebFlux]]

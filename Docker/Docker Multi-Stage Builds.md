@@ -1,3 +1,17 @@
+---
+title: "Docker Multi-Stage Builds"
+type: deep-dive
+tags:
+  - docker
+  - devops
+  - python
+  - packaging
+created: 2026-01-03
+updated: 2026-01-03
+sources: []
+aliases: []
+---
+
 
 A comprehensive guide to understanding Docker, multi-stage builds, Python packaging, and best practices.
 
@@ -943,3 +957,8 @@ ls -la /app
 ---
 
 **Last Updated:** January 2026
+
+## Related
+
+- [[Docker/Docker|Docker]]
+- [[Docker/Docker Command Cheatsheet|Docker Command Cheatsheet]]

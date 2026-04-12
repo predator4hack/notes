@@ -1,3 +1,16 @@
+---
+title: "Server"
+type: concept
+tags:
+  - concurrency
+  - networking
+  - server
+created: 2025-12-01
+updated: 2025-12-02
+sources: []
+aliases: []
+---
+
 
 A **server** is a program (or sometimes a machine) that:
 - **Listens** for incoming network requests (e.g., HTTP)
@@ -269,3 +282,9 @@ There are specific scenarios where the **Thread-per-Request (Blocking)** model i
 
 ---
 
+## Related
+
+- [[Concurrency/Socket|Socket]]
+- [[Concurrency/Servlet|Servlet]]
+- [[Concurrency/Non Blocking IO|Non-Blocking IO]]
+- [[Concurrency/Connecting Servers, sockets, servlet, servlet containers|Connecting Servers, Sockets & Containers]]

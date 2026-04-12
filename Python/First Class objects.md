@@ -1,3 +1,16 @@
+---
+title: "First Class Objects in Python"
+type: deep-dive
+tags:
+  - python
+  - functions
+  - first-class-objects
+created: 2025-12-14
+updated: 2026-03-15
+sources: []
+aliases: []
+---
+
 
 When we say **“functions are first-class objects in Python”**, we mean that **functions are treated just like any other object (e.g., int, string, list)**.
 
@@ -733,3 +746,8 @@ python -m package.module
 ---
 
 _Generated: 2026-01-03_
+
+## Related
+
+- [[Python/CPython Internals|CPython Internals]]
+- [[Python/Python Methods|Python Methods]]

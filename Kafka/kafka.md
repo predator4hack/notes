@@ -1,3 +1,16 @@
+---
+title: "Kafka"
+type: architecture
+tags:
+  - kafka
+  - distributed-systems
+  - messaging
+created: 2025-12-14
+updated: 2025-12-14
+sources: []
+aliases: []
+---
+
 # Kafka
 
 -   Super efficient MAIL ROOM
@@ -78,3 +91,7 @@ At Most Once Delivery
 -   Meaning: Each event is delivered zero or one time. Kafka will never deliver the same event twice, but there’s a risk some events might not be processed at all—especially in the event of a failure.
 -   How it works: The consumer commits the offset as soon as the message is read (before processing). 1
 -   If a crash happens during processing: The last-read message may be lost and never processed, since Kafka thinks the offset has already been handled.
+
+## Related
+
+- [[Kafka/Kafka Deep Dive - Core Concepts|Kafka Deep Dive - Core Concepts]]

@@ -1,3 +1,15 @@
+---
+title: "Python Logging"
+type: concept
+tags:
+  - python
+  - logging
+created: 2025-12-01
+updated: 2025-12-01
+sources: []
+aliases: []
+---
+
 
 Setting a logger's level using `logger.setLevel(logging.INFO)` means that the logger will process all log messages that are at the **INFO level or higher in severity**.
 
@@ -149,3 +161,7 @@ app_logger = logging.getLogger('my_app')
     - The **Good** way uses a format string and arguments. The `logging` module will only perform the **expensive calculation** (and string formatting) if the log message level is high enough to be processed. This is a critical performance detail.
         
 - **Propagate Control:** Be aware of the `propagate` attribute on loggers. By default, log messages propagate up the hierarchy to parent loggers (and eventually the root logger). Setting it to `False` (`'propagate': False`) stops this behavior, giving you total control over where a message is handled.
+
+## Related
+
+- [[Python/Python Methods|Python Methods]]

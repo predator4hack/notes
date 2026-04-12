@@ -1,3 +1,16 @@
+---
+title: "Pydantic BaseModel"
+type: concept
+tags:
+  - python
+  - pydantic
+  - validation
+created: 2025-12-14
+updated: 2026-03-15
+sources: []
+aliases: []
+---
+
 
 In this context, inheriting from `pydantic.BaseModel` is the **core mechanism** for defining a structured, validated data schema.
 
@@ -316,3 +329,7 @@ Use `@classmethod` when:
 1.  You need **Alternative Constructors** (creating objects from various input formats).
 2.  You need to access or modify **Class Variables** (shared across all instances).
 3.  You want to support correct **Inheritance** (using `cls` ensures the correct subclass is instantiated).
+
+## Related
+
+- [[Python/Python Methods|Python Methods]]

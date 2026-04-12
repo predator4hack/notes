@@ -1,3 +1,16 @@
+---
+title: "CPython Internals"
+type: deep-dive
+tags:
+  - python
+  - cpython
+  - internals
+created: 2026-03-15
+updated: 2026-03-15
+sources: []
+aliases: []
+---
+
 
 
 CPython is the default and most widely used implementation of the Python programming language. Written in C and Python, it serves as the reference implementation against which other versions (like PyPy, Jython, or IronPython) are compared.
@@ -227,17 +240,6 @@ Python compiles bytecode **per code object**, not per file. Code objects are cre
 -   Comprehensions
 
 ---
-## Related Notes
-- [[Python Memory Management]]
-- [[Python Concurrency and GIL]]
-- [[Abstract Syntax Trees in Python]]
-- [[CPython Internals]]
-- [[Python Memory Management]]
-- [[Python Concurrency and GIL]]
-- [[Abstract Syntax Trees in Python]]
-
-
-
 
 Even though **Python is called an “interpreted language”**, it actually does a **small compilation step before execution**. The result of that step is what you see inside the `__pycache__` directory.
 
@@ -343,3 +345,9 @@ Meaning:
     
 
 This prevents conflicts between different Python versions.
+
+## Related
+
+- [[Python Memory Management]]
+- [[Python/Python Concurrency & Architecture|Python Concurrency & Architecture]]
+- [[Python/First Class objects|First Class Objects]]

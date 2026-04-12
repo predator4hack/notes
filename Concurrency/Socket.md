@@ -1,3 +1,16 @@
+---
+title: "Socket"
+type: concept
+tags:
+  - concurrency
+  - networking
+  - socket
+created: 2025-12-01
+updated: 2025-12-02
+sources: []
+aliases: []
+---
+
 			
 a **socket** is a software endpoint that establishes a bidirectional communication link between two programs running on the network
 
@@ -106,3 +119,8 @@ If you have 1 Server and 1,000 connected Clients, your operating system is manag
 
 Every single open connection requires its own unique File Descriptor. This is why the **"Too many open files"** error is the most common crash reason for high-load servers.
 
+## Related
+
+- [[Concurrency/Server|Server]]
+- [[Concurrency/Servlet|Servlet]]
+- [[Concurrency/Non Blocking IO|Non-Blocking IO]]

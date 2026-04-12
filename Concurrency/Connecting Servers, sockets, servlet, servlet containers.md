@@ -1,3 +1,17 @@
+---
+title: "Connecting Servers, Sockets, Servlets & Containers"
+type: deep-dive
+tags:
+  - concurrency
+  - networking
+  - java
+  - servlet
+created: 2025-12-03
+updated: 2025-12-03
+sources: []
+aliases: []
+---
+
 
 ---
 
@@ -284,3 +298,9 @@ Yes, but they all follow the same rules (The Servlet Specification), so your cod
 
 **So, when you see "Apache Tomcat," think: "A Web Server that contains a Servlet Container."**
 
+## Related
+
+- [[Concurrency/Server|Server]]
+- [[Concurrency/Socket|Socket]]
+- [[Concurrency/Servlet|Servlet]]
+- [[Concurrency/Non Blocking IO|Non-Blocking IO]]

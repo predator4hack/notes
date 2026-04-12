@@ -1,3 +1,17 @@
+---
+title: "Cores & Multithreading"
+type: concept
+tags:
+  - concurrency
+  - multithreading
+  - cpu
+  - os
+created: 2025-12-03
+updated: 2025-12-03
+sources: []
+aliases: []
+---
+
 
 ### 🧠 Core vs. Thread: The Basics
 
@@ -164,3 +178,9 @@ Imagine Request A asks the server to calculate Pi to the millionth decimal (a he
 |**Best For**|Heavy computation, simple code, standard apps.|High concurrency, Streaming, Microservices (lots of network calls).|
 
 **So, WebFlux extracts the maximum efficiency out of your multi-core processor by removing the overhead of managing hundreds of idle threads.**
+
+## Related
+
+- [[OS/Processes vs. Threads|Processes vs. Threads]]
+- [[Concurrency/Thread Safety|Thread Safety]]
+- [[Python/Python Concurrency & Architecture|Python Concurrency & Architecture]]

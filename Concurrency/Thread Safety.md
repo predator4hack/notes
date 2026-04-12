@@ -1,3 +1,16 @@
+---
+title: "Thread Safety"
+type: concept
+tags:
+  - concurrency
+  - multithreading
+  - thread-safety
+created: 2025-12-02
+updated: 2025-12-09
+sources: []
+aliases: []
+---
+
 
 A class is thread-safe if it behaves correctly when accessed from multiple threads, regardless of the scheduling or intereleaving of the execution of those threads by the runtime environmentm and with no additional synchronization or other coordination on the part of the calling code
 
@@ -145,3 +158,8 @@ public class LoggingWidget extends Widget {
 
 ## Guarding state with locks
 
+## Related
+
+- [[Concurrency/Cores & Multithreading|Cores & Multithreading]]
+- [[OS/Processes vs. Threads|Processes vs. Threads]]
+- [[Python/Python Concurrency & Architecture|Python Concurrency & Architecture]]

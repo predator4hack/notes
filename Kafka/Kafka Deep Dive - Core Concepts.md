@@ -1,3 +1,16 @@
+---
+title: "Kafka Deep Dive - Core Concepts"
+type: deep-dive
+tags:
+  - kafka
+  - distributed-systems
+  - messaging
+created: 2026-01-05
+updated: 2026-01-05
+sources: []
+aliases: []
+---
+
 
 ## Table of Contents
 
@@ -591,3 +604,7 @@ kafka-configs.sh --alter --topic my-topic \
 ---
 
 _End of Notes_
+
+## Related
+
+- [[Kafka/kafka|Kafka]]

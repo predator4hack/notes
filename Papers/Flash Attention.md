@@ -1,3 +1,17 @@
+---
+title: "Flash Attention"
+type: concept
+tags:
+  - deep-learning
+  - attention
+  - papers
+  - gpu
+created: 2026-01-15
+updated: 2026-03-15
+sources: []
+aliases: []
+---
+
 
 Volatile memory: loses data when power is removed
 
@@ -26,7 +40,6 @@ Now, in the **GPU + Fast Attention** context:
 3. **Host DRAM (CPU memory)** and **Disk (non-volatile)**
     - Even slower, used for staging data when GPU memory runs out.
 
+## Related
 
-
-
-
+- [[Deep Learning/Pytorch methods|PyTorch Methods]]

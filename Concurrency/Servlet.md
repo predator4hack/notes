@@ -1,3 +1,16 @@
+---
+title: "Servlet"
+type: deep-dive
+tags:
+  - concurrency
+  - java
+  - servlet
+created: 2025-12-01
+updated: 2025-12-03
+sources: []
+aliases: []
+---
+
 
 A **Servlet** is a Java program that runs on a web server. It acts as a middle layer between a request coming from a web browser (or other HTTP client) and the database or applications on the web server
 
@@ -452,4 +465,10 @@ public class MyController {
 4. **Servlet/Controller:** Created **ONCE** (Singleton).
     
 5. **Request/Response DTOs:** Created **per user** (passed _into_ the Singleton).
-    
+
+## Related
+
+- [[Concurrency/Server|Server]]
+- [[Concurrency/Socket|Socket]]
+- [[Concurrency/Non Blocking IO|Non-Blocking IO]]
+- [[Concurrency/Spring Boot Vs Spring MVC Vs Spring WebFlux|Spring Boot vs Spring MVC vs Spring WebFlux]]

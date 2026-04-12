@@ -1,3 +1,16 @@
+---
+title: "PyTorch Methods"
+type: reference
+tags:
+  - deep-learning
+  - pytorch
+  - python
+created: 2026-03-15
+updated: 2026-03-15
+sources: []
+aliases: []
+---
+
 
 ## Pytorch Unsqueeze 
 ### 📘 Overview
@@ -123,3 +136,6 @@ x[:, None]   # same as unsqueeze(x, 1)
   - Regular tensor: self.w = torch.randn(3, 3) → NOT trainable
   - Parameter: self.w = nn.Parameter(torch.randn(3, 3)) → Trainable
 
+## Related
+
+- [[Papers/Flash Attention|Flash Attention]]
