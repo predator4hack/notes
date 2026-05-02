@@ -61,6 +61,7 @@ aliases: []
 ## Low Level Design
 
 - [[Low Level Design/1. Introduction to LLD|Introduction to LLD]] — What LLD is and how it relates to HLD (stub)
+- [[Low Level Design/OOP Deep Dive|OOP Deep Dive]] — Excalidraw visual reference: four pillars, constructors, access modifiers, class relationships, generics, SOLID, Java vs Python (deep-dive)
 
 ## OS
 
@@ -102,4 +103,4 @@ aliases: []
 
 ---
 
-*Maintained by Claude Code. 33 pages indexed.*
+*Maintained by Claude. 34 pages indexed.*
